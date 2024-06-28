@@ -3,132 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hariraj K - Portfolio</title>
+    <title>Hariraj K | Data Scientist</title>
     <style>
+        /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            color: #333;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
             color: white;
-            text-align: center;
-            padding: 1em 0;
+            padding: 1em;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        section {
-            margin: 20px 0;
-        }
-        h2 {
-            color: #333;
-        }
-        .profile, .projects, .education, .interests {
-            background: #f4f4f4;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        .projects ul, .education ul, .interests ul {
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
             list-style-type: none;
             padding: 0;
         }
-        .projects ul li, .education ul li, .interests ul li {
-            background: #fff;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #333;
+
+        nav ul li a {
             color: white;
+            padding: 0.5em;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        .hero img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .hero h1, .hero p {
+            margin: 0.5em 0;
+        }
+
+        /* Main Sections */
+        main {
+            padding: 2em;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            border-bottom: 2px solid #6a11cb;
+            padding-bottom: 0.5em;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .about-content img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 1em;
+        }
+
+        /* Core Competencies */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1em;
+            text-align: center;
+        }
+
+        .competency svg {
+            width: 64px;
+            height: 64px;
+        }
+
+        /* Projects Accomplished */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1em;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1em;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Additional Experience */
+        .experience-timeline {
+            border-left: 2px solid #6a11cb;
+            padding-left: 1em;
+        }
+
+        .experience-entry {
+            margin-bottom: 1em;
+        }
+
+        /* Education & Credentials */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 1em;
+        }
+
+        /* Footer */
+        footer {
+            background: #f8f8f8;
             text-align: center;
             padding: 1em 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
-        @media screen and (max-width: 768px) {
-            .container {
-                width: 95%;
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-content img {
+                margin: 0 auto 1em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
         }
+        .project-card img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1em;
+    }
     </style>
 </head>
 <body>
     <header>
-        <h1>Hariraj K (picklehari)</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#competencies">Core Competencies</a></li>
+                <li><a href="#projects">Projects Accomplished</a></li>
+                <li><a href="#experience">Additional Experience</a></li>
+                <li><a href="#education">Education & Credentials</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <img src="images/img.jpg" alt="Hariraj K">
+            <h1>Hariraj K</h1>
+            <p>Data Scientist</p>
+            <p>Transforming data into actionable insights</p>
+        </section>
     </header>
-    <div class="container">
-        <section class="profile">
+    <main>
+        <section id="about">
             <h2>About Me</h2>
-            <p>I'm Hariraj K, a passionate Data Scientist based in Palakkad, Kerala, India. With a strong foundation in computer science, I specialize in creating intelligent systems that bridge the gap between data and actionable insights. My career has been a journey through the fascinating realms of Machine Learning, Big Data, and Natural Language Processing. I am dedicated to leveraging my skills to solve complex problems and drive innovation.</p>
+            <div class="about-content">
+                <img src="images/img.jpg" alt="Hariraj K">
+                <p>I am Hariraj K, a passionate Data Scientist with a strong foundation in Computer Science, obtained from Model Engineering College in Kochi, Kerala. With years of experience in the field, I have honed my skills in various domains such as Large Language Models, Multi-Agent Frameworks, and Data Retrieval Systems. My work revolves around creating innovative solutions that leverage machine learning, statistical, and probabilistic modeling to solve complex problems. I am proficient in Natural Language Processing, Behavioral Modeling, and Data Visualization, which allows me to transform raw data into meaningful insights. My journey has been marked by significant contributions to projects like a Portfolio Generator and an automated Job-Search Tool, both of which showcase my ability to integrate diverse technologies and frameworks effectively. I am always eager to learn and explore new challenges, aiming to make impactful contributions in the realm of data science.</p>
+            </div>
         </section>
-        <section class="skills">
-            <h2>Comprehensive Profile</h2>
-            <h3>Core Competencies:</h3>
-            <ul>
-                <li><strong>Large Language Models (LLMs):</strong> Expertise in developing and implementing LLMs to enhance data processing and retrieval.</li>
-                <li><strong>Multi-Agent Frameworks:</strong> Skilled in designing agent-based systems that perform distinct tasks to achieve a common objective.</li>
-                <li><strong>Data Retrieval Systems (RAGs):</strong> Proficient in building robust data retrieval systems.</li>
-                <li><strong>Agent-Based Modelling & Reinforcement Learning:</strong> Adept at simulating environments and training agents for optimal decision-making.</li>
-                <li><strong>Natural Language Processing (RAGs):</strong> Experienced in processing and analyzing human language data to derive meaningful insights.</li>
-                <li><strong>Big Data & Machine Learning:</strong> Extensive knowledge in handling large datasets and applying machine learning techniques for predictive analytics.</li>
-                <li><strong>Statistical and Probabilistic Modelling:</strong> Strong background in statistical analysis and probabilistic models for data interpretation.</li>
-                <li><strong>Behavioral Modeling:</strong> Capable of modeling user behavior to predict future actions.</li>
-                <li><strong>Product and Architecture Development:</strong> Proficient in designing and developing data-driven products and architectures.</li>
-                <li><strong>Data Visualization & Manipulation:</strong> Skilled in creating visual representations of data to communicate insights effectively.</li>
-                <li><strong>Statistical Analysis:</strong> Expertise in conducting statistical tests and analyses to support data-driven decisions.</li>
-            </ul>
+        <section id="competencies">
+            <h2>Core Competencies</h2>
+            <div class="competencies-grid">
+                <div class="competency">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="8" width="48" height="48" fill="#4a90e2"/>
+                        <rect x="16" y="16" width="32" height="8" fill="#fff"/>
+                        <rect x="16" y="28" width="32" height="8" fill="#fff"/>
+                        <rect x="16" y="40" width="32" height="8" fill="#fff"/>
+                    </svg>
+                    <p>Large Language Models (LLMs)</p>
+                </div>
+                <div class="competency">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="8" width="48" height="48" fill="#50e3c2"/>
+                        <circle cx="20" cy="20" r="8" fill="#fff"/>
+                        <circle cx="44" cy="20" r="8" fill="#fff"/>
+                        <circle cx="32" cy="44" r="8" fill="#fff"/>
+                    </svg>
+                    <p>Multi-Agent Frameworks</p>
+                </div>
+                <div class="competency">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="8" width="48" height="48" fill="#f5a623"/>
+                        <rect x="16" y="16" width="16" height="16" fill="#fff"/>
+                        <rect x="36" y="16" width="16" height="16" fill="#fff"/>
+                        <rect x="16" y="36" width="16" height="16" fill="#fff"/>
+                        <rect x="36" y="36" width="16" height="16" fill="#fff"/>
+                    </svg>
+                    <p>Data Retrieval Systems (RAGs)</p>
+                </div>
+            </div>
         </section>
-        <section class="projects">
-            <h2>Project Experiences</h2>
-            <ul>
-                <li>
+        <section id="projects">
+            <h2>Projects Accomplished</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="8" width="48" height="48" fill="#4a90e2"/>
+                        <rect x="16" y="16" width="32" height="8" fill="#fff"/>
+                        <rect x="16" y="28" width="32" height="8" fill="#fff"/>
+                        <rect x="16" y="40" width="32" height="8" fill="#fff"/>
+                        <circle cx="32" cy="32" r="12" fill="#f5a623"/>
+                    </svg>
                     <h3>Portfolio Generator</h3>
-                    <p>Developed a tool that extracts information from resumes and GitHub repositories to create a comprehensive profile and a visually appealing website. Utilized a multi-agent framework, including Resume Researcher, GitHub Researcher, Writer Agent, Web Page Developer, UX Designer, and Quality Assurance Agent. Output: A single HTML file that forms the portfolio website.</p>
-                </li>
-                <li>
+                    <p>A tool that extracts information from resumes and GitHub repositories, compiles a comprehensive profile, and creates a visually appealing website. Utilizes the CrewAI framework with multiple agents, each having a specific role and goal.</p>
+                    <p>Technologies: CrewAI, Python, HTML/CSS</p>
+                </div>
+                <div class="project-card">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="8" width="48" height="48" fill="#50e3c2"/>
+                        <rect x="16" y="16" width="32" height="32" fill="#fff"/>
+                        <rect x="24" y="24" width="16" height="16" fill="#f5a623"/>
+                        <rect x="28" y="28" width="8" height="8" fill="#4a90e2"/>
+                    </svg>
                     <h3>Job-Search Tool</h3>
-                    <p>Created an automated script to monitor YCombinator Hackernews job postings, match them with resumes, and send SMS alerts for potential job matches. Integrated crawling and API fetches, LLM models (Llama3 and Mistral), and Twilio for automated notifications.</p>
-                </li>
-                <li>
-                    <h3>PRACTICALY</h3>
-                    <p>Developed a framework that allows users to upload PDFs, URLs, or videos to generate lecture notes, rank topic importance, and create question papers. Implemented reusable pipelines, speech-to-text models, VLM models (Llava), BeautifulSoup for content fetching, and LLM models (llama3) for note generation and question paper creation.</p>
-                </li>
-                <li>
-                    <h3>MITRE-ALIGNED SOC AUTOMATION</h3>
-                    <p>Designed a framework for SOC automation using models and tools aligned with MITRE standards.</p>
-                </li>
-                <li>
-                    <h3>Resume Alerts</h3>
-                    <p>Built an automated script to monitor job postings, match them with resumes, and send SMS alerts using data extraction and LLM models (Llama3 and Mistral).</p>
-                </li>
-            </ul>
+                    <p>An automated script that monitors YCombinator Hackernews job postings, matches them with resumes, and sends SMS alerts for potential job matches using libraries and APIs for data extraction and analysis.</p>
+                    <p>Technologies: Python, Twilio, LLM</p>
+                </div>
+                <div class="project-card">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="8" width="48" height="48" fill="#f5a623"/>
+                        <rect x="16" y="16" width="32" height="8" fill="#fff"/>
+                        <rect x="16" y="28" width="32" height="8" fill="#fff"/>
+                        <rect x="16" y="40" width="32" height="8" fill="#fff"/>
+                        <circle cx="48" cy="48" r="8" fill="#4a90e2"/>
+                    </svg>
+                    <h3>Practicaly - Lecture Notes and Question Generator</h3>
+                    <p>A Python script designed to generate lecture notes and question papers based on input text data from various sources. It uses NLP and clustering techniques to identify core topics, assign importance scores, and generate comprehensive lecture notes and questions.</p>
+                    <p>Technologies: Python, NLP, sklearn, ollama, OpenAI</p>
+                </div>
+            </div>
         </section>
-        <section class="education">
+        <section id="experience">
+            <h2>Additional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-entry">
+                    <h3>Beyond Zeros and Ones</h3>
+                    <p>Mediator / Session Conductors - Hosted and mediated panel discussions on various topics.</p>
+                </div>
+                <div class="experience-entry">
+                    <h3>Papers We Love Kochi Chapter</h3>
+                    <p>Organizer - Organized discussions of research papers on various topics.</p>
+                </div>
+                <div class="experience-entry">
+                    <h3>Prevalent AI</h3>
+                    <ul>
+                        <li>Leveraged machine learning and advanced analytics to design and develop data-driven solutions.</li>
+                        <li>Developed and implemented machine learning models for anomaly detection and data drift monitoring.</li>
+                        <li>Applied advanced analytics to system-generated logs for security and operational efficiency.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="education">
             <h2>Education & Credentials</h2>
             <ul>
-                <li><strong>Bachelor of Technology in Computer Science:</strong> Model Engineering College, Thrikkakara, Kochi, Kerala, India.</li>
-                <li><strong>General Studies:</strong> Kendriya Vidyalaya Central School, Ottapalam, Kerala, India.</li>
+                <li>
+                    <h3>Model Engineering College</h3> 
+                    <p>Bachelor of Technology – Computer Science</p>
+                </li>
+                <li>
+                    <h3>Kendriya Vidyalaya Central School</h3>
+                    <p>General Studies</p>
+                </li>
             </ul>
         </section>
-        <section class="interests">
-            <h2>Interests</h2>
-            <ul>
-                <li>Continually exploring advancements in AI and machine learning.</li>
-                <li>Passionate about developing innovative solutions that address real-world challenges.</li>
-                <li>Keen interest in data-driven storytelling and visualization.</li>
-            </ul>
-        </section>
-    </div>
+    </main>
     <footer>
-        <p>&copy;AI Generated HTML using Portfolio Generator.</p>
+        <p>Contact Information: picklehari@gmail.com | <a href="https://picklehari.github.io" target="_blank">Website</a> | <a href="https://www.linkedin.com/in/picklehari/" target="_blank">LinkedIn</a> |  <a href="https://github.com/picklehari" target="_blank">GitHub</a>| <a href="mailto:picklehari@gmail.com">Email</a></p>
+        <p>Generate by AI</p>
     </footer>
 </body>
 </html>
